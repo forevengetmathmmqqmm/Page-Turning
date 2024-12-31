@@ -6,4 +6,6 @@ import Vconsole from 'vconsole'
 import router from './router'
 import './sdk/jquery'
 import './sdk/turn'
-createApp(App).use(router).mount('#app')
+import { createPinia } from 'pinia';
+const pinia = createPinia();
+createApp(App).use(pinia).use(router).mount('#app')
